@@ -21,7 +21,6 @@ async function gerarConselhos() {
 }
 
 async function gerarUmConselho() {
-  /* 5. Tratar os erros durante a chamada da API usando o try-catch */
   try {
     const conselho = await gerarConselhos();
     const id = conselho.slip.id;
@@ -33,14 +32,11 @@ async function gerarUmConselho() {
   }
 }
 
-/* 6. atualizar o conteúdo do id e descrição do conselho que foram atribuídos a variáveis usando o innerText */
 function atualizarConteudo(id, descricao) {
   idDoConselho.innerText = `Advice #${id}`;
   descricaoDoConselho.innerText = descricao;
 }
 
-
-/* 7 e 8 */
 botaoGerarConselho.addEventListener("click", () => {
     gerarUmConselho();
 });
